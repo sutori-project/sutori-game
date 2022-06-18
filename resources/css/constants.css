@@ -1,0 +1,18 @@
+/**
+ * -----------------------------------------
+ * Initial style constants.
+ * -----------------------------------------
+ */
+
+:root {
+	--screen-width: 784px;
+	--screen-height: calc(784px * 0.715);
+
+	--col-background: #000;
+	--col-page-background: #fff;
+
+
+	--font-family-ui: normal 16px 'Calibri', sans-serif;
+	--font-family-ui-h1: bold 32px 'Calibri', sans-serif;
+	--font-family-text: normal 16px 'Calibri', sans-serif;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<moments>
+		<moment>
+			<text actor="player">Example of a moment loaded in the includes area.</text>
+			<image for="background" resource="bg_scaled_beach" />
+		</moment>
+	</moments>
+</document>

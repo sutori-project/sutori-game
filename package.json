@@ -1,0 +1,31 @@
+{
+  "name": "sutori-js-game",
+	"version": "0.0.1",
+	"homepage": "https://github.com/sutori-project/sutori-js-game",
+	"author": {
+		"name": "Steve Bailey (kodaloid)",
+		"email": "steve@kodaloid.com",
+		"url": "https://kodaloid.com"
+	},
+	"description": "A template for creating games using the sutori engine",
+	"main": "dist/sutori-js-game-win_x64.exe",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sutori-project/sutori-js-game.git"
+	},
+	"license": "MIT",
+	"keywords": [
+		"js",
+		"game"
+	],
+	"bugs": {
+		"url": "https://github.com/sutori-project/sutori-js-game/issues"
+	},
+	"scripts": {
+		"build": "tsc && cp node_modules/sutori-js/dist/sutori.js resources/js/sutori.js && cp node_modules/sutori-js/dist/sutori.js.map resources/js/sutori.js.map && neu run",
+		"run": "neu run"
+	},
+	"dependencies": {
+    "sutori-js": "^0.0.2"
+  }
+}

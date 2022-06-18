@@ -1,0 +1,147 @@
+@import url('minireset.min.css');
+@import url('constants.css');
+@import url('sizings.css');
+
+
+html, body { overflow: hidden; }
+body { background-color: var(--col-background); height: 100vh; }
+
+
+#app {
+	width: var(--screen-width)!important;
+	height: var(--screen-height)!important;
+	background-color: var(--col-page-background);
+	transform-origin: center;
+	user-select: none;
+}
+
+
+#app .screen {
+	height: 100%;
+	cursor: pointer;
+}
+
+
+#app .screen .screen-contents {
+	display: flex; height: 100%; align-items: center;
+	justify-content: center; flex-direction: column;
+	font: var(--font-family-ui);
+}
+
+
+#app .screen h1 { font: var(--font-family-ui-h1); }
+
+
+/**
+ * -----------------------------------------
+ * Main Menu Styles
+ * -----------------------------------------
+ */
+
+
+.screen-main-menu .main-menu {
+	align-self: start;
+   margin-left: 26px;
+}
+
+.screen-main-menu .main-menu .menu-page:not(.is-active) {
+	display: none;
+}
+
+.screen-main-menu .main-menu .menu-page.is-active:before {
+	content: attr(data-header);
+   font-weight: bold;
+   margin-bottom: 10px;
+   display: block;
+}
+
+.screen-main-menu .main-menu .menu-item {
+	font: var(--font-family-ui);
+	margin: 0 0 10px 0;
+	height: 46px;
+	line-height: 44px;
+	padding: 0 15px;
+	width: 200px;
+	border-radius: 5px;
+	background: #fff;
+	border: 3px solid transparent;
+	font-weight: bold;
+}
+
+.screen-main-menu .main-menu .menu-item.active,
+.screen-main-menu .main-menu .menu-item:hover {
+	border: 3px solid #8bb2fa;
+	background: #d3e2ff;
+	color: #005aff;
+}
+
+.screen-main-menu .screen-contents {
+	background-image: url(../assets/images/menu-bg.png);
+	background-size: 100%;
+	justify-content: end !important;
+	padding-bottom: 15px;
+}
+
+
+/**
+ * -----------------------------------------
+ * Game Screen Styles
+ * -----------------------------------------
+ */
+
+
+.screen-game { position: relative; display: flex; }
+.screen-game .dialog-text {
+	position: absolute; bottom: 10px; left: 10px; right: 10px; height: fit-content;
+	background-color: aliceblue; border-radius: 10px; border: 8px solid #8bb5d9;
+	padding: 10px; font: var(--font-family-text); min-height: 83px;
+}
+.screen-game .dialog-text div { position: relative; height: 100%; }
+.screen-game .options-box {
+	background-color: aliceblue; border-radius: 10px; border: 8px solid #8bb5d9;
+	padding: 10px; font: var(--font-family-text);
+	width: 40%;
+  	right: 5%;
+	box-shadow: 6px 6px 6px #00000080;
+	align-self: center;
+	position: absolute;
+}
+.screen-game .options-box:not(.active) { display:none; }
+.screen-game .options-box > div { display: flex; flex-direction: column; }
+.screen-game .options-box > div button { 
+	all: initial; display: block; padding: 10px; background: white;
+	font: var(--font-family-text); cursor: pointer;
+}
+.screen-game .options-box > div button:hover { background-color: orange; }
+.screen-game .dialog-text.is-hidden { display: none; }
+.screen-game .dialog-text div {
+	animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+.screen-game .dialog-text.waiting-for-input:after {
+	content: '>';
+	position: relative;
+	left: -4px;
+	background: #f0f8ff;
+	display: inline-block;
+	width: 20px;
+	line-height: 20px;
+	height: 20px;
+	text-align: center;
+	font-size: 16px;
+	transform-origin: 10px 10px;
+	transform: rotate(90deg);
+	animation: blinker 750ms cubic-bezier(.5, 0, 1, 1) infinite alternate;
+}
+.screen-game:not(.is-loading) .loading-text { display:none; }
+.screen-game .loading-text {
+	align-self: center;
+   margin: auto;
+   background: white;
+   border-radius: 4px;
+   padding: 10px 15px;
+   font: var(--font-family-text);
+}
+.screen-game.is-loading .dialog-text { display: none; }
+@keyframes blinker {
+	50% {	opacity: 0; }
+}

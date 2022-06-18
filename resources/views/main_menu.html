@@ -1,0 +1,28 @@
+<div class="screen screen-main-menu">
+
+	<script type="text/javascript">
+		window.gotoMenuPage = function(pageID) {
+			// remove previously active page.
+			document.querySelectorAll('.menu-page').forEach(e => {
+				e.classList.remove('is-active');
+			});
+			// select the new one.
+			const newPage = document.querySelector('#menu-page-'+pageID);
+			newPage.classList.add('is-active');
+		}
+	</script>
+	
+	<div class="screen-contents">
+		<div class="main-menu">
+			<ul id="menu-page-main" class="menu-page is-active" data-header="Main Menu">
+				<li class="menu-item" onclick="theGame.GotoScreen(SutoriScreenKey.Game)">Start Game</li>
+				<li class="menu-item" onclick="gotoMenuPage('options')">Options</li>
+				<li class="menu-item" onclick="Neutralino.app.exit();">Exit</li>
+			</ul>
+			<ul id="menu-page-options" class="menu-page" data-header="Options">
+				<li class="menu-item" onclick="gotoMenuPage('main')">&lt; Back</li>
+			</ul>
+		</div>
+	</div>
+	
+</div>

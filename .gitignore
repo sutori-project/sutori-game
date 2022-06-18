@@ -1,0 +1,16 @@
+# Neutralinojs binaries and builds
+/.tmp
+/.vscode
+/bin
+/dist
+/node_modules
+
+# specific file ignores
+neutralino.js
+sutori.js
+sutori.js.map
+package-lock.json
+
+# Neutralinojs related files
+.storage
+*.log
