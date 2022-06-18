@@ -2,6 +2,8 @@
 
 A template for creating visual novel computer games in JavaScript, HTML and CSS.
 
+![Screenshot of the Sutori Game Window](https://github.com/sutori-project/sutori-game/blob/main/screenshot.png?raw=true)
+
 The template uses [Sutori JS](https://github.com/sutori-project/sutori-js) multimedia
 engine, and [Neutralino](https://neutralino.js.org/) to wrap your game in an app
 that can be shared with others.
