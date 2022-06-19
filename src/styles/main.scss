@@ -1,0 +1,44 @@
+@import "./constants";
+
+
+/**
+ * Main Styles ----------------------------------------------------------------
+ */
+
+
+html {
+	overflow: hidden;
+
+	body {
+		overflow: hidden;
+		background-color: var(--col-background);
+		height: 100vh;
+	}
+}
+
+
+#app {
+	width: var(--screen-width)!important;
+	height: var(--screen-height)!important;
+	background-color: var(--col-page-background);
+	transform-origin: center;
+	user-select: none;
+
+	.screen {
+		height: 100%;
+		cursor: pointer;
+
+		h1 { font: var(--font-family-ui-h1); }
+
+		.screen-contents {
+			display: flex; height: 100%; align-items: center;
+			justify-content: center; flex-direction: column;
+			font: var(--font-family-ui);
+		}
+	}
+}
+
+
+@import "./screen-main-menu";
+@import "./screen-game";
+@import "./responsive";

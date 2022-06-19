@@ -1,0 +1,89 @@
+/**
+ * Game Screen ----------------------------------------------------------------
+ */
+
+
+@keyframes blinker {
+	50% {	opacity: 0; }
+}
+
+
+.screen.screen-game {
+
+	position: relative;
+	display: flex;
+
+	.dialog-text {
+		position: absolute; bottom: 10px; left: 10px; right: 10px; height: fit-content;
+		background-color: aliceblue; border-radius: 10px; border: 8px solid #8bb5d9;
+		padding: 10px; font: var(--font-family-text); min-height: 83px;
+
+		div {
+			position: relative;
+			height: 100%;
+		}
+
+		.is-hidden {
+			display: none;
+		}
+
+		div {
+			animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+		}
+
+		&.waiting-for-input:after {
+			content: '>';
+			position: relative;
+			left: -4px;
+			background: #f0f8ff;
+			display: inline-block;
+			width: 20px;
+			line-height: 20px;
+			height: 20px;
+			text-align: center;
+			font-size: 16px;
+			transform-origin: 10px 10px;
+			transform: rotate(90deg);
+			animation: blinker 750ms cubic-bezier(.5, 0, 1, 1) infinite alternate;
+		}
+	}
+
+	.options-box {
+		background-color: aliceblue; border-radius: 10px; border: 8px solid #8bb5d9;
+		padding: 10px; font: var(--font-family-text);
+		width: 40%;
+		right: 5%;
+		box-shadow: 6px 6px 6px #00000080;
+		align-self: center;
+		position: absolute;
+
+		&:not(.active) { display:none; }
+		& > div {
+			display: flex;
+			flex-direction: column;
+			button { 
+				all: initial;
+				display: block;
+				padding: 10px;
+				background: white;
+				font: var(--font-family-text);
+				cursor: pointer;
+				&:hover {
+					background-color: orange;
+				}
+			}
+		}
+	}
+
+	&:not(.is-loading) .loading-text { display:none; }
+	&.is-loading .dialog-text { display: none; }
+
+	.loading-text {
+		align-self: center;
+		margin: auto;
+		background: white;
+		border-radius: 4px;
+		padding: 10px 15px;
+		font: var(--font-family-text);
+	}
+}

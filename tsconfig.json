@@ -2,13 +2,13 @@
 	"compilerOptions": {
 		"module": "amd",
 		"target": "es2017",
-		"sourceMap": true,
+		"sourceMap": false,
 		"allowJs": true,
 		"outFile": "resources/js/sutori-game.js"
 	},
 	"include": [
 		"node_modules/sutori-js/dist/sutori.d.ts",
-		"resources/ts/**/*"
+		"src/scripts/**/*"
 	],
 	"exclude": []
 }

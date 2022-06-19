@@ -18,9 +18,8 @@ To run the demo game, do the following:
 
 1. Clone this repo.
 2. Restore the dependencies with: `npm install`
-2. Make sure typescript tools are installed: `npm install -g typescript`
-3. Make sure neutralino is installed: `npm install -g @neutralinojs/neu`
-4. Make sure neutralino is ready: `neu update` 
+2. Make sure typescript, SASS & neutralino are installed: `npm install -g typescript sass @neutralinojs/neu`
+4. Make sure neutralino is ready: `neu update`
 5. Build & run with: `npm run build`
 
 ## Making It Your Own
@@ -46,6 +45,12 @@ tampering with often. Once the first release is published, the project will go
 onto a rotation to make sure the dependencies stay up to date, and any requested
 features get added. Post that, I'll move on to making the IDE as robust and as
 possible so that it can be used by a wide age and skill gamut.
+
+## Support
+
+All support is greatly appreciated!
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/U7U2YUV6)
 
 ## Contributors
 

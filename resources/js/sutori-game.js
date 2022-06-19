@@ -136,6 +136,17 @@ class SutoriScreen {
         }
     }
 }
+class SutoriScreenEndCredits extends SutoriScreen {
+    constructor(owner) {
+        super(owner, SutoriScreenKey.Splash, 'end_credits.html');
+    }
+    OnShown() {
+        this.LoadView();
+    }
+    OnHide() {
+        // do something.
+    }
+}
 class SutoriScreenGame extends SutoriScreen {
     constructor(owner) {
         super(owner, SutoriScreenKey.Game, 'game.html');
@@ -321,17 +332,6 @@ class SutoriScreenSplash extends SutoriScreen {
         // do something.
     }
 }
-class SutoriScreenEndCredits extends SutoriScreen {
-    constructor(owner) {
-        super(owner, SutoriScreenKey.Splash, 'end_credits.html');
-    }
-    OnShown() {
-        this.LoadView();
-    }
-    OnHide() {
-        // do something.
-    }
-}
 var SutoriScreenKey;
 (function (SutoriScreenKey) {
     SutoriScreenKey[SutoriScreenKey["Splash"] = 0] = "Splash";
@@ -339,4 +339,3 @@ var SutoriScreenKey;
     SutoriScreenKey[SutoriScreenKey["Game"] = 2] = "Game";
     SutoriScreenKey[SutoriScreenKey["EndCredits"] = 3] = "EndCredits";
 })(SutoriScreenKey || (SutoriScreenKey = {}));
-//# sourceMappingURL=sutori-game.js.map

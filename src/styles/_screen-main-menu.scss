@@ -1,0 +1,50 @@
+/**
+ * Main Menu Screen -----------------------------------------------------------
+ */
+
+
+.screen.screen-main-menu {
+	.screen-contents {
+		background-image: url(../assets/images/menu-bg.png);
+		background-size: 100%;
+		justify-content: end !important;
+		padding-bottom: 15px;
+	}
+
+
+	.main-menu {
+		align-self: start;
+		margin-left: 26px;
+
+		.menu-page:not(.is-active) {
+			display: none;
+		}
+
+		.menu-page.is-active:before {
+			content: attr(data-header);
+			font-weight: bold;
+			margin-bottom: 10px;
+			display: block;
+		}
+
+		.menu-item {
+			font: var(--font-family-ui);
+			margin: 0 0 10px 0;
+			height: 46px;
+			line-height: 44px;
+			padding: 0 15px;
+			width: 200px;
+			border-radius: 5px;
+			background: #fff;
+			border: 3px solid transparent;
+			font-weight: bold;
+
+			.active,
+			&:hover {
+				border: 3px solid #8bb2fa;
+				background: #d3e2ff;
+				color: #005aff;
+			}
+		}
+	}
+}
