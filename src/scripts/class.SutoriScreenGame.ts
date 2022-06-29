@@ -36,7 +36,7 @@ class SutoriScreenGame extends SutoriScreen {
 			if (initScript.length == 0) throw new Error("Missing a script to run!");
 
 			// load in a document.
-			const doc = await SutoriDocument.LoadXml(initScript);
+			const doc = await SutoriDocument.LoadXmlFile(initScript);
 
 			// create a server engine.
 			self.Document = doc;
@@ -103,7 +103,7 @@ class SutoriScreenGame extends SutoriScreen {
 	private HandleChallengeImages(event: SutoriChallengeEvent) {
 		const self = this;
 
-		event.Moment.GetImages(this.Culture).forEach(imageElement => {
+		event.Moment.GetMedia(this.Culture).forEach(imageElement => {
 
 			switch (imageElement.For)
 			{

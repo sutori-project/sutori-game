@@ -1,50 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?>
-<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<resources>
-		<image id="bg_scaled_beach" name="Scaled Beach" src="backgrounds/scaled_beach.png"/>
-		<image id="bg_scaled_bedroom" name="Scaled Bedroom" src="backgrounds/scaled_bedroom.png"/>
-		<image id="bg_scaled_park" name="Scaled Park" src="backgrounds/scaled_park.png"/>
-		<image id="bg_scaled_park2" name="Scaled Park 2" src="backgrounds/scaled_park2.png"/>
-		<image id="bg_scaled_station" name="Scaled Station" src="backgrounds/scaled_station.png"/>
-	</resources>
-	<actors>
-		<actor id="player" name="The Player" />
-	</actors>
-	<moments>
-		<moment>
-			<text data-example="test">Hi there!</text>
-			<image for="background" resource="bg_scaled_station" />
-		</moment>
-		<moment data-example="another test" clear="false">
-			<text>This is a demonstration showing how sutori-js works!</text>
-		</moment>
-		<moment id="test">
-			<text actor="player">Which door do you want to open?</text>
-			<option target="door1">Door 1</option>
-			<option target="door2">Door 2</option>
-			<option target="door3">Door 3</option>
-			<text lang="fr-FR">Quelle porte voulez-vous ouvrir?</text>
-			<option lang="fr-FR" target="door1">Porte 1</option>
-			<option lang="fr-FR" target="door2">Porte 2</option>
-			<option lang="fr-FR" target="door3">Porte 3</option>
-		</moment>
-		<moment id="door1" goto="end">
-			<text>You picked Door 1, the park!</text>
-			<text lang="fr-FR">Tu as choisi la porte 1!</text>
-			<image for="background" resource="bg_scaled_park" />
-		</moment>
-		<moment id="door2" goto="end">
-			<text>You picked Door 2, the other park!</text>
-			<text lang="fr-FR">Tu as choisi la porte 2!</text>
-			<image for="background" resource="bg_scaled_park2" />
-		</moment>
-		<moment id="door3" goto="end">
-			<text>You picked Door 3, the bedroom!</text>
-			<text lang="fr-FR">Tu as choisi la porte 3!</text>
-			<image for="background" resource="bg_scaled_bedroom" />
-		</moment>
-		<moment id="end">
-			<text>This is the end.</text>
-		</moment>
-	</moments>
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <include>Untitled.xml</include>
+  <resources>
+    <image id="bg_scaled_beach" name="Scaled Beach" src="backgrounds/scaled_beach.png"/>
+    <image id="bg_scaled_bedroom" name="Scaled Bedroom" src="backgrounds/scaled_bedroom.png"/>
+    <image id="bg_scaled_park" name="Scaled Park" src="backgrounds/scaled_park.png"/>
+    <image id="bg_scaled_park2" name="Scaled Park 2" src="backgrounds/scaled_park2.png"/>
+    <image id="bg_scaled_station" name="Scaled Station" src="backgrounds/scaled_station.png"/>
+  </resources>
+  <actors>
+    <actor id="player" name="The Player" color="#0084ff"/>
+  </actors>
+  <moments>
+    <moment clear="true">
+      <text>Hi there!</text>
+      <media resource="bg_scaled_station" for="background"/>
+    </moment>
+    <moment data-example="another test">
+      <text>This is a demonstration showing how sutori-js works!</text>
+    </moment>
+    <moment clear="true" id="test">
+      <text>Which door do you want to open?</text>
+      <option target="door1">Door 1</option>
+      <option target="door2">Door 2</option>
+      <option target="door3">Door 3</option>
+      <text lang="fr-FR">Quelle porte voulez-vous ouvrir?</text>
+      <option lang="fr-FR" target="door1">Porte 1</option>
+      <option lang="fr-FR" target="door2">Porte 2</option>
+      <option lang="fr-FR" target="door3">Porte 3</option>
+    </moment>
+    <moment clear="true" id="door1" goto="end">
+      <text>You picked Door 1, the park!</text>
+      <text lang="fr-FR">Tu as choisi la porte 1!</text>
+      <media resource="bg_scaled_park" for="background"/>
+    </moment>
+    <moment clear="true" id="door2" goto="end">
+      <text>You picked Door 2, the other park!</text>
+      <text lang="fr-FR">Tu as choisi la porte 2!</text>
+      <media resource="bg_scaled_park2" for="background"/>
+    </moment>
+    <moment clear="true" id="door3" goto="end">
+      <text>You picked Door 3, the bedroom!</text>
+      <text lang="fr-FR">Tu as choisi la porte 3!</text>
+      <media resource="bg_scaled_bedroom" for="background"/>
+    </moment>
+    <moment clear="true" id="end">
+      <text>This is the end.</text>
+    </moment>
+  </moments>
 </document>
